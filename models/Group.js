@@ -119,7 +119,9 @@ class Group {
       return "City not found";
     }
     requiredRegion.city.splice(ind, 1);
-    return "deleted successfully";
+    return Group.findUserCitiesForgroup(currentUser, region)
+    //return "deleted successfully";
+    //return users;
   }
 
   static removeUserGroup(currentUser, region) {

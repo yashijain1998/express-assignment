@@ -52,7 +52,7 @@ function addCityInGroup(currentUser, region,city) {
 
 function removecity(currentUser,region,deletedCity) {
    let deleteCity = group.removeUserCity(currentUser,region,deletedCity);
-   if(deleteCity == "deleted successfully") {
+   if(deleteCity != "this region is not present" && deleteCity != "City not found") {
        return {deleteCity:deleteCity , code: 200}
    }
    return {deleteCity:deleteCity , code: 404}
